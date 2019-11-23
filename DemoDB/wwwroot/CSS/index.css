@@ -1,0 +1,13 @@
+﻿td:nth-child(1) {
+    display: flex;
+    line-height: 39px;
+}
+.name{
+    width: 250px;
+}
+input{
+    width: 200px !important;
+}
+.display{
+    display: block!important;
+}

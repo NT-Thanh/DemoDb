@@ -1,0 +1,79 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Demo</title>
+    <link href="/lib/bootstrap-4.3.1-dist/css/bootstrap.css" rel="stylesheet" />
+    <link href="/CSS/index.css" rel="stylesheet" />
+</head>
+<body>
+    <div id="root">
+        <div class="container col-12">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">#</th>
+                        <th scope="col">MongoDB</th>
+                        <th scope="col">SQLServer</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <div class="name">Tìm kiếm một bản ghi</div>
+                            <input class="form-control" id="searchID" placeholder="ID" />
+                        </td>
+                        <td><button id="compareGetOne" class="btn btn-dark" value="2" type="button">So Sánh</button></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td><div class="name">Lấy tất cả bản ghi</div></td>
+                        <td><button id="compareGet" class="btn btn-dark" value="2" type="button">So Sánh</button></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="name">Sửa một bản ghi</div>
+                            <input class="form-control" id="updateID" placeholder="ID" />
+                        </td>
+                        <td><button id="compareUpdateOne" class="btn btn-dark" value="2" type="button">So Sánh</button></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td><div class="name">Sửa nhiều bản ghi</div></td>
+                        <td><button id="compareUpdate" class="btn btn-dark" value="2" type="button">So Sánh</button></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="name">Xóa một bản ghi</div>
+                            <input class="form-control" id="deleteID" placeholder="ID" />
+                        </td>
+                        <td><button id="compareDeleteOne" class="btn btn-dark" value="2" type="button">So Sánh</button></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="name">Xóa nhiều bản ghi</div>
+                            <input class="form-control" id="deleteNumber" placeholder="Number" />
+                        </td>
+                        <td><button id="compareDelete" class="btn btn-dark" value="2" type="button">So Sánh</button></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script src="/lib/jquery/jquery-3.4.1.min.js"></script>
+    <script src="/lib/bootstrap-4.3.1-dist/js/bootstrap.js"></script>
+    <script src="/Script/index.js"></script>
+</body>
+</html>
