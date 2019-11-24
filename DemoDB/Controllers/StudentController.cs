@@ -16,16 +16,9 @@ namespace DemoDB.Controllers
         private readonly MalmartMySqlDL malmartMySqlDL = new MalmartMySqlDL();
         [Route("studentmongo")]
         [HttpGet]
-        public ActionResult getMongo()
+        public long getMongo()
         {
-            try
-            {
-                return Ok(studentMongoDL.Get());
-            }
-            catch (Exception ex)
-            {
-                return Ok("Error");
-            }
+            return studentMongoDL.Get();
         }
         [Route("studentmongo/{id}")]
         [HttpGet]
@@ -60,29 +53,15 @@ namespace DemoDB.Controllers
 
         [Route("student")]
         [HttpGet]
-        public ActionResult getSql()
+        public long getSql()
         {
-            try
-            {
-                return Ok(malmartMySqlDL.Get());
-            }
-            catch (Exception ex)
-            {
-                return Ok("Error");
-            }
+                return malmartMySqlDL.Get();
         }
         [Route("student/{id}")]
         [HttpGet]
-        public ActionResult getSqlOne(int id)
+        public long getSqlOne(int id)
         {
-            try
-            {
-                return Ok(malmartMySqlDL.GetOne(id));
-            }
-            catch (Exception ex)
-            {
-                return Ok("Error");
-            }
+                return malmartMySqlDL.GetOne(id);
         }
         [Route("student")]
         [HttpPut]
@@ -108,11 +87,5 @@ namespace DemoDB.Controllers
         {
             return malmartMySqlDL.DeleteOne(id);
         }
-        //[Route("studentmysql")]
-        //[HttpGet]
-        //public long getMysql()
-        //{
-        //    return malmartMySqlDL.Get();
-        //}
     }
 }

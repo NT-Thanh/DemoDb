@@ -34,7 +34,7 @@ namespace DemoDB
             services.AddSingleton<ISchoolDatabaseSettings>(sp =>
                 sp.GetRequiredService<IOptions<SchoolDatabaseSettings>>().Value);
 
-            services.AddControllers();
+            services.AddControllers();    
             services.AddMvc(option => option.EnableEndpointRouting = false)
                 .SetCompatibilityVersion(CompatibilityVersion.Version_3_0)
                 .AddNewtonsoftJson(opt => opt.SerializerSettings.ReferenceLoopHandling = ReferenceLoopHandling.Ignore);
