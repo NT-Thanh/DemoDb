@@ -6,14 +6,14 @@ using System.Text;
 
 namespace Entities
 {
-    public class Student
+    public class Order
     {
         [BsonId]
         [BsonRepresentation(BsonType.ObjectId)]
         public string Id { get; set; }
-        public int student_id { get; set; }
-        public string student_name { get; set; }
-        public int student_age { get; set; }
-        public int class_id { get; set; }
+        public int order_id { get; set; }
+        public int total_money { get; set; }
+        public int store_id { get; set; }
+        public int customer_id { get; set; }
     }
 }

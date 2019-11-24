@@ -13,13 +13,21 @@ namespace DemoDB.Controllers
     [ApiController]
     public class StudentController : ControllerBase
     {
-        private readonly StudentMongoDL studentMongoDL = new StudentMongoDL();
+        private readonly OrderMongoDL studentMongoDL = new OrderMongoDL();
         private readonly StudentSqlDL studentSqlDL = new StudentSqlDL();
+        private readonly MalmartMySqlDL malmartMySqlDL = new MalmartMySqlDL();
         [Route("studentmongo")]
         [HttpGet]
-        public long getMongo()
+        public ActionResult getMongo()
         {
-            return studentMongoDL.Get();
+            try
+            {
+                return Ok(studentMongoDL.Get());
+            }
+            catch (Exception ex)
+            {
+                return Ok("Error");
+            }
         }
         [Route("studentmongo/{id}")]
         [HttpGet]
@@ -54,39 +62,59 @@ namespace DemoDB.Controllers
 
         [Route("student")]
         [HttpGet]
-        public long getSql()
+        public ActionResult getSql()
         {
-            return studentSqlDL.Get();
+            try
+            {
+                return Ok(malmartMySqlDL.Get());
+            }
+            catch (Exception ex)
+            {
+                return Ok("Error");
+            }
         }
         [Route("student/{id}")]
         [HttpGet]
-        public long getSqlOne(int id)
+        public ActionResult getSqlOne(int id)
         {
-            return studentSqlDL.GetOne(id);
+            try
+            {
+                return Ok(malmartMySqlDL.GetOne(id));
+            }
+            catch (Exception ex)
+            {
+                return Ok("Error");
+            }
         }
         [Route("student")]
         [HttpPut]
         public long UpdateSql()
         {
-            return studentSqlDL.Update();
+            return malmartMySqlDL.Update();
         }
         [Route("student/{id}")]
         [HttpPut]
         public long UpdateSqlOne(int id)
         {
-            return studentSqlDL.UpdateOne(id);
+            return malmartMySqlDL.UpdateOne(id);
         }
         [Route("student/{number}")]
         [HttpDelete]
         public long DeleteSql(int number)
         {
-            return studentSqlDL.Delete(number);
+            return malmartMySqlDL.Delete(number);
         }
         [Route("studentdelete/{id}")]
         [HttpDelete]
         public long DeleteSqlOne(int id)
         {
-            return studentSqlDL.DeleteOne(id);
+            return malmartMySqlDL.DeleteOne(id);
         }
+        //[Route("studentmysql")]
+        //[HttpGet]
+        //public long getMysql()
+        //{
+        //    return malmartMySqlDL.Get();
+        //}
     }
 }

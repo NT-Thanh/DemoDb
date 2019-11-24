@@ -11,3 +11,13 @@ input{
 .display{
     display: block!important;
 }
+.loading-mask {
+    background: url('/image/Infinity-1s-84px.gif') no-repeat 0px;
+    width: 100%;
+    height: 40px;
+}
+.footer{
+    font-size: 18px;
+    position: absolute;
+    bottom: 0px;
+}
