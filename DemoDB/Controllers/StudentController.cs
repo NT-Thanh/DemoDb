@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using DemoDB.Services;
 using DemoDL;
 using Entities;
 using Microsoft.AspNetCore.Http;
@@ -14,7 +13,6 @@ namespace DemoDB.Controllers
     public class StudentController : ControllerBase
     {
         private readonly OrderMongoDL studentMongoDL = new OrderMongoDL();
-        private readonly StudentSqlDL studentSqlDL = new StudentSqlDL();
         private readonly MalmartMySqlDL malmartMySqlDL = new MalmartMySqlDL();
         [Route("studentmongo")]
         [HttpGet]
